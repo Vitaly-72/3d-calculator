@@ -14,7 +14,8 @@ document.getElementById('saveBtn').addEventListener('click', function() {
         </div>
     `;
     element.appendChild(companyInfo);
-    
+    	 const AUTHOR = "Синишин Виталий (vitas-0071@yandex.ru)";
+         const LICENSE = "Проприетарная лицензия. Использование только с разрешения автора.";
     html2canvas(element, {
         scale: 2,
         backgroundColor: '#ffffff'
@@ -42,3 +43,4 @@ document.getElementById('saveBtn').addEventListener('click', function() {
     });
     $('#saveBtn').show();
 });
+
