@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+
+
+<link href="style.css" rel="stylesheet" type="text/css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+<script src="Price.js"></script>
+ 
+ <div id="glav">
+ 
+ <div id="setka">
+   <img src="img/3d.webp">		
+</div>
+ <div style="width: 100%; font-family: Arial, sans-serif;  margin: 0 auto;">
+  <div style="display: flex; border-bottom: 1px solid #ccc; font-weight: bold; padding: 5px 0;">
+    <div style="width: 30%; text-align: center;"></div>
+    <div style="width: 70%; text-align: center;"></div>
+  </div>
+  <div style="display: flex; padding: 5px 0; align-items: center;" class="">
+    <div style="width: 40%; text-align: left;">Длина м.(без ворот)</div>
+    <div style="width: 60%; text-align: center;">
+      <input type="number" placeholder="в метрах" value="0" style="width: 78%; padding: 3px;" id="data1">
+    </div>
+  </div>
+	<div style="display: flex; padding: 5px 0; align-items: center;" class="">
+    <div style="width: 40%; text-align: left;">Вид 3Д сетки</div>
+    <div style="width: 60%; text-align: center;">
+	<select style="width: 80%; padding: 3px;" id="data2">
+  
+    <option value="1">3д Сетка 4мм 2,5*1,8м</option>
+    <option value="2">3д Сетка 4мм 2,5*2м</option>
+    <option value="3">3д Сетка 3мм 2,7*1,8м</option>
+    <option value="4">3д Сетка 3мм 2,7*2м</option>
+</select> 
+    </div>
+  </div>
+  <div style="display: flex; padding: 5px 0; align-items: center;" class="">
+    <div style="width: 40%; text-align: left;">Столбы</div>
+    
+    <div style="width: 60%; text-align: center;">
+	<select style="width: 80%; padding: 3px;" id="data10">
+    <option value="0">Нет</option>
+    <option value="1">60х40 2м</option>
+    <option value="2">60х40 2,5м</option>
+    <option value="3">60х60 2м</option>
+	<option value="4">60х60 2,5м</option>
+	
+</select>
+    </div>
+  </div>
+<div style="display: flex; padding: 5px 0; align-items: center;" class="">
+    <div style="width: 40%; text-align: left;">Ворота</div>
+    
+    <div style="width: 60%; text-align: center;">
+	<select style="width: 80%; padding: 3px;" id="data3">
+    <option value="0">Нет</option>
+    <option value="1">Ворота распашные 1,8*4м </option>
+    <option value="2">Ворота распашные 2*3м</option>
+	<option value="3">Ворота распашные 2*4м</option>
+	
+</select> 
+    </div>
+  </div>
+
+<div style="display: flex; padding: 5px 0; align-items: center;" class="">
+    <div style="width: 40%; text-align: left;">Калитка</div>
+    
+    <div style="width: 60%; text-align: center;">
+	<select style="width: 80%; padding: 3px;" id="data4">
+    <option value="0">Нет</option>
+    <option value="1">Калитка 1,8м</option>
+    <option value="2">Калитка 2м</option>
+	
+</select> 
+    </div>
+  </div>
+</div>
+ <div id="navigation3">	
+	<div onclick="" class="nav-2">
+  <div class="btn-calk btn-one" id="data5">
+    <span>Рассчитать материалы</span>
+  </div>
+</div>
+  </div>
+
+ <div style="width: 100%; font-family: Arial, sans-serif;  margin: 0 auto;" id="step2">
+  <div id="adrs" style="display: none; flex; border-bottom: 1px solid #ccc; font-weight: bold; padding: 5px 0;">
+    <div style="width: 100%; text-align: center;">Компания "Заборчик"<br> Адрес: ул.Промышленная 110<br>тел: +7999 999 999<br>WhatsApp: +7999 999 999<br><br></div>
+  </div>
+  
+  <div style="display: flex; border-bottom: 1px solid #ccc; font-weight: bold; padding: 5px 0;">
+    <div style="width: 55%; text-align: center;">Наименование</div>
+    <div style="width: 15%; text-align: center;">Кол-во</div>
+	<div style="width: 30%; text-align: center;">Стоимость</div>
+    
+  </div>
+  
+  <div style="display: flex; padding: 5px 0; align-items: center;" id="dan1" class="">
+    <div style="width: 55%; text-align: left;" id="name1">вид какой сетки тут</div>
+   
+    <div style="width: 15%; text-align: center;">
+      <input type="number" value="0" style="width: 80%; padding: 3px;" id="kolsetki">
+    </div>
+   
+   <div style="width: 30%; text-align: center;" id="price1">цена за сетку</div>
+   
+  </div>
+    
+	<div style="display: flex; padding: 5px 0; align-items: center;" id="dan2" class="">
+    <div style="width: 55%; text-align: left;" id="name2">вид какой сетки тут</div>
+   
+    <div style="width: 15%; text-align: center;">
+      <input type="number" value="0" style="width: 80%; padding: 3px;" id="koltrub">
+    </div>
+   
+   <div style="width: 30%; text-align: center;" id="price2">цена за сетку</div>
+   
+  </div>
+
+<div style="display: flex; padding: 5px 0; align-items: center;" id="dan3" class="">
+    <div style="width: 55%; text-align: left;" id="name3">вид какой сетки тут</div>
+   
+    <div style="width: 15%; text-align: center;">
+      <input type="number" value="0" style="width: 80%; padding: 3px;" id="kolkrep">
+    </div>
+   
+   <div style="width: 30%; text-align: center;" id="price3">цена за сетку</div>
+   
+  </div>
+
+<div style="display: flex; padding: 5px 0; align-items: center;" id="dan4" class="">
+    <div style="width: 55%; text-align: left;" id="name4">вид какой сетки тут</div>
+   
+    <div style="width: 15%; text-align: center;">
+      <input type="number" value="0" style="width: 80%; padding: 3px;" id="vorot">
+    </div>
+   
+   <div style="width: 30%; text-align: center;" id="price4">цена за сетку</div>
+   
+  </div>
+
+
+<div style="display: flex; padding: 5px 0; align-items: center;" id="dan5" class="">
+    <div style="width: 55%; text-align: left;" id="name5">вид какой сетки тут</div>
+   
+    <div style="width: 15%; text-align: center;">
+      <input type="number" value="0" style="width: 80%; padding: 3px;" id="kolitka">
+    </div>
+   
+   <div style="width: 30%; text-align: center;" id="price5">цена за сетку</div>
+   
+  </div>
+  
+<div style="display: flex; border-bottom: 1px solid #ccc; font-weight: bold; padding: 5px 0; " id="dan7" class="">
+ 
+    <div style="width: 100%; text-align: center;color: red;">Вы не указали ни одного параметра</div>
+ </div>
+ 
+ 
+<div style="display: flex; border-bottom: 1px solid #ccc; font-weight: bold; padding: 5px 0;" id="dan6" class="">
+    <div style="width: 55%; text-align: center;"> </div>
+   
+    <div style="width: 15%; text-align: center;">ИТОГО</div>
+   
+   <div style="width: 30%; text-align: center;" id="price6">тут сумма</div>
+   
+  </div>
+ <div id="saveBtn">	
+	<div onclick="" class="nav-2">
+  <div class="btn-calk btn-one">
+    <span>Сохранить результат</span>
+  </div>
+</div>
+  </div>
+</div>
+
+</div>
+
+<script src="Calkscript.js"></script>	
+
+
+
+
+</body>
+
+
+	
+</html>
